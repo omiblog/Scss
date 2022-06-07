@@ -1,0 +1,112 @@
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:active, :hover, :focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 100%;
+  font-weight: 400;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 0.625rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: aqua;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: blueviolet;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #f00;
+}
+
+.header .tobar {
+  padding: 30px 10px;
+}
+
+.header .tobar .navbar-brand a {
+  font-size: 35px;
+  color: #ffffff;
+}
+
+.header .navbar {
+  padding: 20px 0;
+  background-color: #cccccc;
+}
+
+.header .navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.header .navbar ul li {
+  padding: 10px 20px;
+}
+
+.main {
+  padding: 30px 0;
+}
+
+.main article {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 70%;
+          flex: 0 0 70%;
+  max-width: 70%;
+  display: inline-block;
+}
+
+.main aside {
+  -webkit-box-flex: 30%;
+      -ms-flex: 30%;
+          flex: 30%;
+  max-width: 30%;
+  display: inline-block;
+}
+
+.mybox {
+  background-color: lightgray;
+  color: #000000;
+  padding: 15px;
+  font-size: 20px;
+  font-family: arial;
+  margin: 100px;
+  width: 300px;
+  height: 300px;
+}
+/*# sourceMappingURL=style.css.map */

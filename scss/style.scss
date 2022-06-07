@@ -1,0 +1,144 @@
+$main-color: #f00;
+$white-color:#ffffff;
+$sidebar-color:#cccccc;
+$black-color:#000000;
+$font-family:'Courier New', Courier, monospace;
+
+*, 
+*::after, 
+*::before{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;    
+}
+:active, :hover, :focus{
+    outline: 0;
+    outline-offset: 0;
+}
+a, a:hover{
+    text-decoration: none;
+}
+ul,ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+body{
+font-size: 100%;
+font-weight: 400;
+font-family: Arial, Helvetica, sans-serif;
+}
+::-webkit-scrollbar{
+    width: 0.625rem;
+}
+::-webkit-scrollbar-track{
+    background-color: aqua;
+}
+::-webkit-scrollbar-thumb{
+    background-color: blueviolet;
+}
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.header{
+    background-color: $main-color;
+    .tobar{
+        padding: 30px 10px;
+        .navbar-brand{
+            a{
+                font-size: 35px;
+                color: $white-color;
+            }
+        }
+
+    }
+    .navbar{
+        padding: 20px 0;
+        background-color: $sidebar-color;
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            li{
+                padding: 10px 20px;
+            }
+        }
+    }
+}
+.main{
+    padding: 30px 0;
+    article{
+        flex: 0 0 70%;
+        max-width: 70%;
+        display: inline-block;
+    }
+    aside{
+        flex: 30%;
+        max-width: 30%;
+        display: inline-block;
+    }
+}
+@mixin box($value) {
+    @if $value == dark{
+        background-color: #000000; 
+        color: #ffffff;  
+    } @else if $value == light{
+        background-color:lightgray;
+        color: #000000;
+    }
+}
+.mybox{
+   @include box(light);
+    padding: 15px;
+    font-size: 20px;
+    font-family: arial;
+    
+    margin: 100px;
+    width: 300px;
+    height: 300px;
+}
+// @for $i from 1 through 3 {
+//     .gost-#{$i}{
+//         width: 100px * $i;
+//         background-color: darken(#f00, $i * 10%);
+//         height: 200px * $i;
+//     }
+// }
+// $map: (normal : 12px, bold : 13px, italic : 14px);
+
+// @each $i, $f-size in $map {
+//     .#{$i}{
+//         font-weight: $i;
+//         font-size: $f-size;
+//     }
+    
+// }
+// $list: ((normal, bold, 10px), (emphasis, italic, 15px));
+
+// @each $name, $style, $size in $list {
+//     .#{$name}{
+//         font-weight: $style;
+//         font-size: $size;
+//     }
+    
+// }
+
+$i: 10;
+
+@while $i <= 30 {
+    .pad {
+        padding-left: 10px;
+    }
+    $i: $i + 10;   
+}
+
+
+
